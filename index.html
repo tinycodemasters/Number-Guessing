@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Image -->
+    <div class="bg-img"></div>
+
+    <!-- Game Container -->
+    <div class="game-container">
+      <h1>Number Guessing Game</h1>
+      <ul class="rules">
+        <li>Select a number between 1 and 100.</li>
+        <li>Click "Check" to see if you guessed right.</li>
+        <li>Hints will guide you closer to the number.</li>
+        <li>Keep trying until you win!</li>
+      </ul>
+      <input
+        type="text"
+        id="guessInput"
+        placeholder="Enter your guess"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+      />
+      <div id="result" class="result">Awaiting your guess...</div>
+      <div class="btn-container">
+        <button class="check-btn" onclick="checkGuess()">Check</button>
+        <button class="reset-btn" onclick="resetGame()">Reset</button>
+      </div>
+      <footer>Made with ❤️ for fun!</footer>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
