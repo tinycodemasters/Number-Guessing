@@ -17,9 +17,9 @@ function checkGuess() {
   if (userGuess === randomNumber) {
     resultDisplay.textContent = `Congratulations! You guessed it in ${attempts} attempts.`;
   } else if (userGuess > randomNumber) {
-    resultDisplay.textContent = "Too high! Try again.";
+    resultDisplay.textContent = "You entered a high number! Give it another go.";
   } else {
-    resultDisplay.textContent = "Too low! Try again.";
+    resultDisplay.textContent = "You entered a low number! Give it another go.";
   }
 }
 
